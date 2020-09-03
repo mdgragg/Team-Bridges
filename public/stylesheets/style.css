@@ -2,3 +2,39 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+header {background: #FFFAE8; border-top: solid 10px #F8CF00;}
+header .nav-items {
+    text-align: center;
+    margin: 15px 10px 20px 10px;
+    padding: 10px 5px 20px 5px;
+    font-family: ‘Montserrat’, sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+header .nav-items a {  color: black;}
+header .nav-items a:hover { opacity: .7;}
+.logo { font-family: ‘Oswald’, sans-serif; font-size: 40px; color: black; padding: 20px; }
+.container { text-align: center; margin-top: 20px; font-family: ‘Montserrat’, sans-serif; text-transform: lowercase;}
+.container hr { margin-top: 30px; height: 2px; background-color: #F8CF00; border: none;}
+.container .btn {
+    text-transform: lowercase;
+    margin: 4px 3px;
+    font-size: 18px;
+    padding: 0px 7px 10px 7px;
+    box-shadow: none;
+}
+.container .btn:hover { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
+.modal.modal-fixed-footer {
+    padding: 0;
+    height: 40%;
+    min-height: 300px;
+    width: 40%;
+    min-width: 300px;
+}
+.modal-content h4 {font-family: ‘Oswald’, sans-serif; font-weight: 600; text-transform: lowercase;}
+.modal-content .food-type { color: black;  font-size: 18px; margin-top: -15px; text-transform: lowercase;}
+.modal-content h5 {font-family: ‘Oswald’, sans-serif; font-weight: 600; font-size: 30px;}
+.modal-footer .to-cart { background: #F8CF00; text-transform: capitalize; }
+.modal-footer .modal-close { background: #FFFAE8; color: black; text-transform: capitalize; }
+.modal-footer .to-cart:hover { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }

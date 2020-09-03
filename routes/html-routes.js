@@ -1,6 +1,7 @@
 // Requiring path to so we can use relative routes to our HTML files
 const path = require("path");
 const db = require("../models");
+// const axios = require("axios");
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -34,6 +35,11 @@ module.exports = function(app) {
         subgroup: "food-fruit"
       }
     }).then(results => {
+      // noSpaces adds classes to each emoji
+      results.forEach(result => {
+        result.noSpaces = result.description.replace(/\s/g, "");
+        result.price = (Math.random(5.99 - 0.5) + 0.5).toFixed(2);
+      });
       const obj = {
         fruit: results
       };
@@ -48,15 +54,39 @@ module.exports = function(app) {
         subgroup: "food-vegetable"
       }
     }).then(results => {
-      // replaces spaces in res.desc. and set that to a new property on result
-      results.forEach(
-        result => (result.noSpaces = result.description.replace(/\s/g, ""))
-      );
+      results.forEach(result => {
+        result.noSpaces = result.description.replace(/\s/g, "");
+        result.price = (Math.random(5.99 - 0.5) + 0.5).toFixed(2);
+      });
+      //console.log(emoji);
+      // const key = "36c98c9c42a94c718bb0011d58688bea";
+      // const foodItem = emoji.noSpaces;
+      // console.log(foodItem);
+      // axios
+      //   .get(
+      //     `https://api.spoonacular.com/food/ingredients/autocomplete?query=${foodItem}&apiKey=${key}`
+      //   )
+      //   .then(foodResult => {
+      //     const item = foodResult;
+      //     console.log(item);
+      //     axios
+      //       .get(
+      //         `https://api.spoonacular.com/food/ingredients/${item.id}/information&apiKey=${key}`
+      //       )
+      //       .then(foodPrice => {
+      //         console.log(foodPrice.estimatedCost.value);
+      //         const price = foodPrice.estimatedCost.value;
+      //         // return {...emoji, price };
+      //         console.log("TEST", price);
+      //       });
+      //   });
+      // console.log(priceResults);
+      // Using map, loop through the results and call the spoonacular API to add the price
       const obj = {
         vegetables: results
       };
       res.render("vegetables", obj);
-      console.log(obj.vegetables);
+      // console.log(obj.vegetables);
     });
   });
 };

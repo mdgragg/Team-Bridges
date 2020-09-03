@@ -13,7 +13,7 @@
         </div>
         <div class="row">
             {{#each vegetables}}
-               <a class="btn {{noSpaces}}">{{{dataValues.emoji}}} {{dataValues.description}}</a>
+               <a class="btn {{noSpaces}}">{{{dataValues.emoji}}} {{dataValues.description}} {{price}}</a>
                <!--Add an attribution to create classes for each of these buttons. 
                Data attribute. Attribution would match the description-->
             {{/each}}
