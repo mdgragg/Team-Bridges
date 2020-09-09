@@ -58,6 +58,7 @@ module.exports = function(app) {
         result.noSpaces = result.description.replace(/\s/g, "");
         result.price = (Math.random(5.99 - 0.5) + 0.5).toFixed(2);
       });
+      // BELOW CODE WAS MEANT FOR PULLING PRICE INFO FROM SPOONACULAR
       //console.log(emoji);
       // const key = "36c98c9c42a94c718bb0011d58688bea";
       // const foodItem = emoji.noSpaces;
@@ -87,6 +88,44 @@ module.exports = function(app) {
       };
       res.render("vegetables", obj);
       // console.log(obj.vegetables);
+    });
+  });
+  // ROUTE FOR DRINK EMOJIS
+  app.get("/drink-emojis", (req, res) => {
+    db.Food.findAll({
+      where: {
+        subgroup: "drink"
+      }
+    }).then(results => {
+      // noSpaces adds classes to each emoji
+      results.forEach(result => {
+        result.noSpaces = result.description.replace(/\s/g, "");
+        result.price = (Math.random(10.99 - 0.5) + 0.5).toFixed(2);
+      });
+      const obj = {
+        drink: results
+      };
+      res.render("drinks", obj);
+      console.log(obj.drink);
+    });
+  });
+  // ROUTE FOR DRINK EMOJIS
+  app.get("/prepared-food-emojis", (req, res) => {
+    db.Food.findAll({
+      where: {
+        subgroup: "food-prepared"
+      }
+    }).then(results => {
+      // noSpaces adds classes to each emoji
+      results.forEach(result => {
+        result.noSpaces = result.description.replace(/\s/g, "");
+        result.price = (Math.random(10.99 - 0.5) + 0.5).toFixed(2);
+      });
+      const obj = {
+        prepared: results
+      };
+      res.render("food-prepared", obj);
+      console.log(obj.prepared);
     });
   });
 };
