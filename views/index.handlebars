@@ -11,8 +11,8 @@
                 <div class="col s4"><h5>type of food</h5></div>
             <div class="col s4"><hr></div>
         </div>
-<div class="row">
-            {{#each fruit}}
+    <div class="row">
+            {{#each allFood}}
                 <a class="btn modal-trigger data-name {{noSpaces}}" href="#{{noSpaces}}">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
                 <div id="{{noSpaces}}" class="modal modal-fixed-footer">
                     <div class="modal-content">
@@ -24,10 +24,11 @@
                     <div class="modal-footer">
                       <a href="#!" class="modal-action to-cart btn add-to-cart" id="">&#128722 &nbsp; Add to Cart</a>
                       <a href="#!" class="modal-action modal-close btn">&#128533 &nbsp; Close</a>
-                </div>
-        </div>
+                    </div>
+         </div>
             {{/each}}
-        </div>
+    </div>
+
     </div>
     <script>
       $(document).ready(function(){

@@ -1,0 +1,32 @@
+    <header>
+        <a href="" class="logo">&#128512 groceri emoji</a>
+        <div class="nav-items">  
+            <a href="/cart">Cart</a> | <a href="">type of food</a> | <a href="">type of food</a> | <a href="">type of food</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col s4"><hr></div>
+                <div class="col s4"><h5>Shopping Cart</h5></div>
+            <div class="col s4"><hr></div>
+        </div>
+        <div>
+            <ul>
+                <!--<li><a href="#" data-name="Apple" data-price="1.22">Apple $1.22</a></li>
+                <li><a href="#" data-name="Banana" data-price="1.33">Banana $1.33</a></li>
+                <li><a href="#" data-name="Shoe" data-price="22.33">Shoe $22.33</a></li>
+                <li><a href="#" data-name="Frisbee" data-price="5.22">Frisbee $5.22</a></li>-->
+                <li><a class="btn data-name item-price {{noSpaces}}" href="#{{noSpaces}}">{{{dataValues.emoji}}} {{{dataValues.description}}} {{price}}</a></li>
+            </ul>
+            <button id="clear-cart">Clear Cart</button>
+        </div>
+        <div>
+            <ul id="show-cart">
+                <li>???????</li>
+            </ul>
+            <div>You have <span id="count-cart">X</span> items in your cart</div>
+            <div>Total Cart:$<span id="total-cart"></span></div>
+        </div>
+    </div>
+</div>

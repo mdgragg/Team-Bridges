@@ -128,4 +128,28 @@ module.exports = function(app) {
       console.log(obj.prepared);
     });
   });
+  // ROUTE FOR THE CART
+  // app.get("/cart", (req, res) => {
+  //   const obj = {};
+  //   res.render("cart", obj);
+  // });
+  // MAIN ROUTE
+  app.get("/index", (req, res) => {
+    db.Food.findAll({
+      where: {
+        group: "food-drink"
+      }
+    }).then(results => {
+      // noSpaces adds classes to each emoji
+      results.forEach(result => {
+        result.noSpaces = result.description.replace(/\s/g, "");
+        result.price = (Math.random(10.99 - 0.5) + 0.5).toFixed(2);
+      });
+      const obj = {
+        allFood: results
+      };
+      res.render("index", obj);
+      console.log(obj.allFood);
+    });
+  });
 };
