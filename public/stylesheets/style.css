@@ -2,7 +2,11 @@
 font-family: 'Montserrat', sans-serif;
 font-family: 'Oswald', sans-serif; 
 */
+<<<<<<< HEAD
 ​
+=======
+
+>>>>>>> 44ef1bd07403fc4f15524c4863d0addf2f3eb16a
 header {background: #fffae8; border-top: solid 10px #f8cf00;}
 header .nav-items { 
     text-align: center; 
@@ -14,6 +18,7 @@ header .nav-items {
 }
 header .nav-items a {  color: black; font-weight: 400; }
 header .nav-items a:hover { opacity: .7;}
+<<<<<<< HEAD
 header .nav-items span {  color: #f8cf00; }
 
 .row {
@@ -33,17 +38,38 @@ header .nav-items span {  color: #f8cf00; }
     font-size: 18px; 
     padding: 5px 10px 5px 10px;
     display: inline-block;
+=======
+
+.logo { font-family: 'Oswald', sans-serif; font-size: 40px; color: black; padding: 20px; }
+
+.cart {position: absolute; top: 0px; right: 10px; font-family: 'Oswald', sans-serif; font-size: 20px; color: black; padding: 20px;}
+
+.container { text-align: center; margin-top: 20px; font-family: 'Montserrat', sans-serif; text-transform: lowercase;}
+
+.container hr { margin-top: 30px; height: 2px; background-color: #f8cf00; border: none;}
+
+.container .button {
+    text-transform: lowercase; 
+    margin: 4px 3px; 
+    font-size: 18px; 
+    padding: 10px 7px 10px 7px;
+>>>>>>> 44ef1bd07403fc4f15524c4863d0addf2f3eb16a
     box-shadow: none;
     color: black;
 }
 .container .button:hover { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
+<<<<<<< HEAD
 ​
+=======
+
+>>>>>>> 44ef1bd07403fc4f15524c4863d0addf2f3eb16a
 .modal.modal-fixed-footer {
     padding: 0;
     height: 250px;
     width: 20%;
     min-width: 300px;
 }
+<<<<<<< HEAD
 ​
 .modal-content h4 {text-align: left; font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: lowercase;}
 .modal-content .food-type {text-align: left; color: black;  font-size: 18px; margin-top: -15px; text-transform: lowercase;}
@@ -53,6 +79,17 @@ header .nav-items span {  color: #f8cf00; }
 .modal-footer .modal-close { background: #fffae8; color: black; text-transform: capitalize; }
 .modal-footer .to-cart:hover { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
 ​
+=======
+
+.modal-content h4 {font-family: 'Oswald', sans-serif; font-weight: 600; text-transform: lowercase;}
+.modal-content .food-type { color: black;  font-size: 18px; margin-top: -15px; text-transform: lowercase;}
+.modal-content h5 {font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 30px;}
+
+.modal-footer .to-cart { background: #f8cf00; text-transform: capitalize; }
+.modal-footer .modal-close { background: #fffae8; color: black; text-transform: capitalize; }
+.modal-footer .to-cart:hover { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
+
+>>>>>>> 44ef1bd07403fc4f15524c4863d0addf2f3eb16a
 .grapes {background: #ede7f6;} 
 .melon {background: #f9fbe7;}
 .watermelon {background: #fce4ec;}
@@ -72,7 +109,11 @@ header .nav-items span {  color: #f8cf00; }
 .tomato {background: #ffebee;}
 .olive {display: none;}
 .coconut {background: #fafafa;}
+<<<<<<< HEAD
 ​
+=======
+
+>>>>>>> 44ef1bd07403fc4f15524c4863d0addf2f3eb16a
 .avocado {background: #e8f5e9;}
 .eggplant {background: #ede7f6;}
 .potato {background: #fff3e0;}
@@ -88,11 +129,19 @@ header .nav-items span {  color: #f8cf00; }
 .mushroom {background: #ffebee;}
 .peanuts {background: #efebe9;}
 .chestnut {background: #efebe9;}
+<<<<<<< HEAD
 ​
 .bread {background: #efebe9;}
 .croissant {background: #efebe9;}
 .baguettebread {background: #efebe9;}
 .flatbread {background: #efebe9;}
+=======
+
+.bread {background: #efebe9;}
+.croissant {background: #efebe9;}
+.baguettebread {background: #;}
+.flatbread {background: #;}
+>>>>>>> 44ef1bd07403fc4f15524c4863d0addf2f3eb16a
 .pretzel {background: #efebe9;}
 .bagel {background: #efebe9;}
 .pancakes {background: #fffde7;}
@@ -141,13 +190,21 @@ header .nav-items span {  color: #f8cf00; }
 .dumpling {background: #fffde7;}
 .fortunecookie {background: #efebe9;}
 .takeoutbox {background: #fafafa;}
+<<<<<<< HEAD
 ​
+=======
+
+>>>>>>> 44ef1bd07403fc4f15524c4863d0addf2f3eb16a
 .crab {background: #ffebee;}
 .lobster {background: #ffebee;}
 .shrimp {background: #fff8e1;}
 .squid {background: #eceff1;}
 .oyster {background: #fafafa;}
+<<<<<<< HEAD
 ​
+=======
+
+>>>>>>> 44ef1bd07403fc4f15524c4863d0addf2f3eb16a
 .softicecream {background: #fafafa;}
 .shavedice {background: #ffebee;}
 .icecream {background: #fffde7;}
@@ -162,7 +219,11 @@ header .nav-items span {  color: #f8cf00; }
 .lollipop {background: #e0f7fa;}
 .custard {background: #fffde7;}
 .honeypot {background: #fffde7;}
+<<<<<<< HEAD
 ​
+=======
+
+>>>>>>> 44ef1bd07403fc4f15524c4863d0addf2f3eb16a
 .babybottle {background: #fafafa;}
 .glassofmilk {background: #fafafa;}
 .hotbeverage {background: #efebe9;}
@@ -182,3 +243,7 @@ header .nav-items span {  color: #f8cf00; }
 .beveragebox {background: #f1f8e9;}
 .mate {background: #efebe9;}
 .ice {background: #e1f5fe;}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 44ef1bd07403fc4f15524c4863d0addf2f3eb16a
