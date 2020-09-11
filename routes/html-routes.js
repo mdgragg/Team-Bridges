@@ -5,6 +5,7 @@ const db = require("../models");
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+// const { parse } = require("url");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -29,7 +30,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/members.html"));
   });
   // ROUTE FOR FRUIT EMOJIS
-  app.get("/fruit-emojis", (req, res) => {
+  app.get("/fruit", (req, res) => {
     db.Food.findAll({
       where: {
         subgroup: "food-fruit"
@@ -151,5 +152,21 @@ module.exports = function(app) {
       res.render("index", obj);
       console.log(obj.allFood);
     });
+    // db.Food.findAll({
+    //   where: {
+    //     subgroup: "food-fruit"
+    //   }
+    // }).then(results => {
+    //   // noSpaces adds classes to each emoji
+    //   results.forEach(result => {
+    //     result.noSpaces = result.description.replace(/\s/g, "");
+    //     result.price = (Math.random(10.99 - 0.5) + 0.5).toFixed(2);
+    //   });
+    //   const obj = {
+    //     fruit: results
+    //   };
+    //   res.render("index", obj);
+    //   console.log(obj.fruit);
+    // });
   });
 };

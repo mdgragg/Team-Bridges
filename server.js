@@ -21,7 +21,22 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.engine("handlebars", handlebars({ defaultLayout: "main" }));
+const hbs = handlebars.create({
+  helpers: {
+    equal: function(lvalue, rvalue, options) {
+      if (arguments.length < 3) {
+        throw new Error("Handlebars Helper equal needs 2 parameters");
+      }
+      if (lvalue != rvalue) {
+        return options.inverse(this);
+      }
+      return options.fn(this);
+    }
+  },
+  defaultLayout: "main",
+  partialsDir: ["views/partials/"]
+});
+app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 // Requiring our routes

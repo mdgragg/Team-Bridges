@@ -1,40 +1,184 @@
-form.signup,
-form.login {
-  margin-top: 50px;
-}
-
-header {background: #FFFAE8; border-top: solid 10px #F8CF00;}
-header .nav-items {
-    text-align: center;
+/* 
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif; 
+*/
+​
+header {background: #fffae8; border-top: solid 10px #f8cf00;}
+header .nav-items { 
+    text-align: center; 
     margin: 15px 10px 20px 10px;
     padding: 10px 5px 20px 5px;
-    font-family: ‘Montserrat’, sans-serif;
+    font-family: 'Montserrat', sans-serif; 
     font-weight: 500;
     font-size: 20px;
 }
-header .nav-items a {  color: black;}
+header .nav-items a {  color: black; font-weight: 400; }
 header .nav-items a:hover { opacity: .7;}
-.logo { font-family: ‘Oswald’, sans-serif; font-size: 40px; color: black; padding: 20px; }
-.container { text-align: center; margin-top: 20px; font-family: ‘Montserrat’, sans-serif; text-transform: lowercase;}
-.container hr { margin-top: 30px; height: 2px; background-color: #F8CF00; border: none;}
-.container .btn {
-    text-transform: lowercase;
-    margin: 4px 3px;
-    font-size: 18px;
-    padding: 0px 7px 10px 7px;
-    box-shadow: none;
+header .nav-items span {  color: #f8cf00; }
+
+.row {
+    text-align: center;
 }
-.container .btn:hover { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
+​
+.logo { font-family: 'Oswald', sans-serif; font-weight: 700;  font-size: 40px; color: black; padding: 20px; }
+​
+.cart {position: absolute; top: 0px; right: 10px; font-weight: 700; font-family: 'Oswald', sans-serif; font-size: 20px; color: black; padding: 20px;}
+​
+.container { text-align: center; margin-top: 20px; margin: auto; align-items: center; font-family: 'Montserrat', sans-serif; text-transform: lowercase;}
+.container hr { margin-top: 30px; height: 2px; background-color: #f8cf00; border: none;}
+.container .button {
+    line-height: 3;
+    text-transform: lowercase; 
+    margin: 8px 6px; 
+    font-size: 18px; 
+    padding: 5px 10px 5px 10px;
+    display: inline-block;
+    box-shadow: none;
+    color: black;
+}
+.container .button:hover { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
+​
 .modal.modal-fixed-footer {
     padding: 0;
-    height: 40%;
-    min-height: 300px;
-    width: 40%;
+    height: 250px;
+    width: 20%;
     min-width: 300px;
 }
-.modal-content h4 {font-family: ‘Oswald’, sans-serif; font-weight: 600; text-transform: lowercase;}
-.modal-content .food-type { color: black;  font-size: 18px; margin-top: -15px; text-transform: lowercase;}
-.modal-content h5 {font-family: ‘Oswald’, sans-serif; font-weight: 600; font-size: 30px;}
-.modal-footer .to-cart { background: #F8CF00; text-transform: capitalize; }
-.modal-footer .modal-close { background: #FFFAE8; color: black; text-transform: capitalize; }
+​
+.modal-content h4 {text-align: left; font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: lowercase;}
+.modal-content .food-type {text-align: left; color: black;  font-size: 18px; margin-top: -15px; text-transform: lowercase;}
+.modal-content h5 {text-align: left; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 30px;}
+​
+.modal-footer .to-cart { background: #f8cf00; text-transform: capitalize; }
+.modal-footer .modal-close { background: #fffae8; color: black; text-transform: capitalize; }
 .modal-footer .to-cart:hover { box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2); }
+​
+.grapes {background: #ede7f6;} 
+.melon {background: #f9fbe7;}
+.watermelon {background: #fce4ec;}
+.tangerine {background: #fff3e0;}
+.lemon {background: #fffde7;}
+.banana {background: #fffde7;}
+.pineapple {background: #fff3e0;}
+.mango {background: #fbe9e7;}
+.redapple {background: #ffebee;}
+.greenapple {background: #f1f8e9;}
+.pear {background: #e8f5e9;}
+.peach {background: #fff3e0;}
+.cherries {background: #ffebee;}
+.strawberry {background: #ffebee;}
+.blueberries {display: none;}
+.kiwifruit {background: #e8f5e9;}
+.tomato {background: #ffebee;}
+.olive {display: none;}
+.coconut {background: #fafafa;}
+​
+.avocado {background: #e8f5e9;}
+.eggplant {background: #ede7f6;}
+.potato {background: #fff3e0;}
+.carrot {background: #fff3e0;}
+.earofcorn {background: #fffde7;}
+.hotpepper {background: #ffebee;}
+.bellpepper {background: #ffebee;}
+.cucumber {background: #e8f5e9;}
+.leafygreen {background: #e8f5e9;}
+.broccoli {background: #e8f5e9;}
+.garlic {background: #efebe9;}
+.onion {background: #ffebee;}
+.mushroom {background: #ffebee;}
+.peanuts {background: #efebe9;}
+.chestnut {background: #efebe9;}
+​
+.bread {background: #efebe9;}
+.croissant {background: #efebe9;}
+.baguettebread {background: #efebe9;}
+.flatbread {background: #efebe9;}
+.pretzel {background: #efebe9;}
+.bagel {background: #efebe9;}
+.pancakes {background: #fffde7;}
+.waffle {background: #fffde7;}
+.cheesewedge {background: #fffde7;}
+.meatonbone {background: #ffebee;}
+.poultryleg {background: #efebe9;}
+.cutofmeat {background: #ffebee;}
+.bacon {background: #ffebee;}
+.hamburger {background: #fffde7;}
+.frenchfries {background: #ffebee;}
+.pizza {background: #ffebee;}
+.hotdog {background: #fffde7;}
+.sandwich {background: #fffde7;}
+.taco {background: #fffde7;}
+.burrito {background: #fffde7;}
+.tamale {background: #ffebee;}
+.stuffedflatbread {background: #efebe9;}
+.falafel {background: #efebe9;}
+.egg {background: #fffde7;}
+.cooking {background: #fff8e1;}
+.shallowpanoffood {background: #fff8e1;}
+.potoffood {background: #e1f5fe;}
+.fondue {background: #f9fbe7;}
+.bowlwithspoon {background: #e1f5fe;}
+.greensalad {background: #e8f5e9;}
+.popcorn {background: #ffebee;}
+.butter {background: #fffde7;}
+.salt {background: #fafafa;}
+.cannedfood {background: #ffebee;}
+ 
+.bentobox {background: #efebe9;}
+.ricecracker {background: #fffde7;}
+.riceball {background: #fafafa;}
+.cookedrice {background: #fafafa;}
+.curryrice {background: #fafafa;}
+.steamingbowl {background: #fffde7;}
+.spaghetti {background: #ffebee;}
+.roastedsweetpotato {background: #fce4ec;}
+.oden {background: #efebe9;}
+.sushi {background: #fff8e1;}
+.friedshrimp {background: #fff8e1;}
+.fishcakewithswirl {background: #fafafa;}
+.mooncake {background: #fff8e1;}
+.dango {background: #f1f8e9;}
+.dumpling {background: #fffde7;}
+.fortunecookie {background: #efebe9;}
+.takeoutbox {background: #fafafa;}
+​
+.crab {background: #ffebee;}
+.lobster {background: #ffebee;}
+.shrimp {background: #fff8e1;}
+.squid {background: #eceff1;}
+.oyster {background: #fafafa;}
+​
+.softicecream {background: #fafafa;}
+.shavedice {background: #ffebee;}
+.icecream {background: #fffde7;}
+.doughnut {background: #efebe9;}
+.cookie {background: #efebe9;}
+.birthdaycake {background: #fafafa;}
+.shortcake {background: #fffde7;}
+.cupcake {background: #fff3e0;}
+.pie {background: #fffde7;}
+.chocolatebar {background: #efebe9;}
+.candy {background: #e0f7fa;}
+.lollipop {background: #e0f7fa;}
+.custard {background: #fffde7;}
+.honeypot {background: #fffde7;}
+​
+.babybottle {background: #fafafa;}
+.glassofmilk {background: #fafafa;}
+.hotbeverage {background: #efebe9;}
+.teapot {background: #fafafa;}
+.teacupwithouthandle {background: #fafafa;}
+.sake {background: #fafafa;}
+.bottlewithpoppingcork {background: #efebe9;}
+.wineglass {background: #ffebee;}
+.cocktailglass {background: #fffde7;}
+.tropicaldrink {background: #fff8e1;}
+.beermug {background: #fff8e1;}
+.clinkingbeermugs {background: #fff8e1;}
+.clinkingglasses {background: #fff8e1;}
+.tumblerglass {background: #fff8e1;}
+.cupwithstraw {background: #ffebee;}
+.bubbletea {background: #fafafa;}
+.beveragebox {background: #f1f8e9;}
+.mate {background: #efebe9;}
+.ice {background: #e1f5fe;}

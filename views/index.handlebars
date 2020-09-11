@@ -1,19 +1,29 @@
     <header>
         <a href="" class="logo">&#128512 groceri emoji</a>
+        <a href="#" onclick="divVisibility('cart');" class="cart">&#128722 My Cart</a>
+       
         <div class="nav-items">  
-            <a href="/fruits">fruits</a> | <a href="">type of food</a> | <a href="">type of food</a> | <a href="">type of food</a>
+          <a href="#" onclick="divVisibility('fruits');">fruits</a> <span>|</span>
+          <a href="#" onclick="divVisibility('vegetables');">vegetables</a> <span>|</span>
+          <a href="#" onclick="divVisibility('prepared');">prepared foods</a> <span>|</span>
+          <a href="#" onclick="divVisibility('asian');">asian</a> <span>|</span>
+          <a href="#" onclick="divVisibility('sea-food');">sea food</a> <span>|</span> 
+          <a href="#" onclick="divVisibility('sweets');">sweets</a> <span>|</span> 
+          <a href="#" onclick="divVisibility('drinks');">drinks</a> 
         </div>
     </header>
-
-    <div class="container">
-        <div class="row">
-            <div class="col s4"><hr></div>
-                <div class="col s4"><h5>type of food</h5></div>
-            <div class="col s4"><hr></div>
-        </div>
-    <div class="row">
-            {{#each allFood}}
-                <a class="btn modal-trigger data-name {{noSpaces}}" href="#{{noSpaces}}">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
+    
+​
+    <div class="container" id="all-food">
+      <div class="row">
+        <div class="col s5"><hr></div>
+            <div class="col s2"><h5>All Food</h5></div>
+        <div class="col s5"><hr></div>
+      </div>
+      <div class="row">
+       <a class="button grapes modal-trigger" href="#modal">&#127822 &nbsp; food item</a>
+                {{#each allFood}}
+                <a class="button modal-trigger {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
                 <div id="{{noSpaces}}" class="modal modal-fixed-footer">
                     <div class="modal-content">
                       <h4>{{{dataValues.emoji}}} {{{dataValues.description}}}</h4>
@@ -22,16 +32,243 @@
                         <p class="recipe">Future goal: Recipe with food</p>
                     </div>
                     <div class="modal-footer">
-                      <a href="#!" class="modal-action to-cart btn add-to-cart" id="">&#128722 &nbsp; Add to Cart</a>
-                      <a href="#!" class="modal-action modal-close btn">&#128533 &nbsp; Close</a>
+                      <a href="#!" class="modal-action to-cart button add-to-cart">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
                     </div>
-         </div>
+                </div>
             {{/each}}
+      </div>
+    </div>
+​
+    <div class="container" id="fruits" style="display: none;">
+      <div class="row">
+        <div class="col s5"><hr></div>
+            <div class="col s2"><h5>fruits</h5></div>
+        <div class="col s5"><hr></div>
+      </div>
+      <div class="row">
+                {{#each allFood }} {{#equal dataValues.subgroup "food-fruit"}}
+                <a class="button modal-trigger {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}-fruit">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
+                <div id="{{noSpaces}}-fruit" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                      <h4>{{{dataValues.emoji}}} {{{dataValues.description}}}</h4>
+                        <p class="food-type">{{{dataValues.subgroup}}} </p>
+                            <h5 class="item-price">${{{price}}}</h5>
+                        <p class="recipe">Future goal: Recipe with food</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
+                    </div>
+                </div>
+            {{/equal}}{{/each}} 
+      </div>
+    </div>
+​
+    <div class="container" id="vegetables" style="display: none;">
+      <div class="row">
+        <div class="col s4"><hr></div>
+            <div class="col s4"><h5>vegetables</h5></div>
+        <div class="col s4"><hr></div>
+      </div>
+      <div class="row">
+                {{#each allFood }} {{#equal dataValues.subgroup "food-vegetable"}}
+                <a class="button modal-trigger {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}-vegetable">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
+                <div id="{{noSpaces}}-vegetable" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                      <h4>{{{dataValues.emoji}}} {{{dataValues.description}}}</h4>
+                        <p class="food-type">{{{dataValues.subgroup}}} </p>
+                            <h5 class="item-price">${{{price}}}</h5>
+                        <p class="recipe">Future goal: Recipe with food</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
+                    </div>
+                </div>
+            {{/equal}}{{/each}} 
+      </div>
+    </div>
+​
+    <div class="container" id="prepared" style="display: none;">
+      <div class="row">
+        <div class="col s4"><hr></div>
+            <div class="col s4"><h5>prepared foods</h5></div>
+        <div class="col s4"><hr></div>
+      </div>
+      <div class="row">
+            {{#each allFood }} {{#equal dataValues.subgroup "food-prepared"}}
+                <a class="button modal-trigger {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}-prepared">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
+                <div id="{{noSpaces}}-prepared" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                      <h4>{{{dataValues.emoji}}} {{{dataValues.description}}}</h4>
+                        <p class="food-type">{{{dataValues.subgroup}}} </p>
+                            <h5 class="item-price">${{{price}}}</h5>
+                        <p class="recipe">Future goal: Recipe with food</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
+                    </div>
+                </div>
+            {{/equal}}{{/each}} 
+      </div>
+    </div>
+​
+    <div class="container" id="asian" style="display: none;">
+      <div class="row">
+        <div class="col s5"><hr></div>
+            <div class="col s2"><h5>asian</h5></div>
+        <div class="col s5"><hr></div>
+      </div>
+      <div class="row">
+             {{#each allFood }} {{#equal dataValues.subgroup "food-asian"}}
+                <a class="button modal-trigger {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}-asian">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
+                <div id="{{noSpaces}}-asian" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                      <h4>{{{dataValues.emoji}}} {{{dataValues.description}}}</h4>
+                        <p class="food-type">{{{dataValues.subgroup}}} </p>
+                            <h5 class="item-price">${{{price}}}</h5>
+                        <p class="recipe">Future goal: Recipe with food</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
+                    </div>
+                </div>
+            {{/equal}}{{/each}} 
+      </div>
+    </div>
+​
+    <div class="container" id="sea-food" style="display: none;">
+      <div class="row">
+        <div class="col s5"><hr></div>
+            <div class="col s2"><h5>sea food</h5></div>
+        <div class="col s5"><hr></div>
+      </div>
+      <div class="row">
+            {{#each allFood }} {{#equal dataValues.subgroup "food-marine"}}
+                <a class="button modal-trigger {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}-marine">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
+                <div id="{{noSpaces}}-marine" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                      <h4>{{{dataValues.emoji}}} {{{dataValues.description}}}</h4>
+                        <p class="food-type">{{{dataValues.subgroup}}} </p>
+                            <h5 class="item-price">${{{price}}}</h5>
+                        <p class="recipe">Future goal: Recipe with food</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
+                    </div>
+                </div>
+            {{/equal}}{{/each}} 
+      </div>
+    </div>
+​
+    <div class="container" id="sweets" style="display: none;">
+      <div class="row">
+        <div class="col s5"><hr></div>
+            <div class="col s2"><h5>sweets</h5></div>
+        <div class="col s5"><hr></div>
+      </div>
+      <div class="row">
+            {{#each allFood }} {{#equal dataValues.subgroup "food-sweet"}}
+                <a class="button modal-trigger {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}-sweet">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
+                <div id="{{noSpaces}}-sweet" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                      <h4>{{{dataValues.emoji}}} {{{dataValues.description}}}</h4>
+                        <p class="food-type">{{{dataValues.subgroup}}} </p>
+                            <h5 class="item-price">${{{price}}}</h5>
+                        <p class="recipe">Future goal: Recipe with food</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
+                    </div>
+                </div>
+            {{/equal}}{{/each}} 
+      </div>
+    </div>
+​
+    <div class="container" id="drinks" style="display: none;">
+      <div class="row">
+        <div class="col s5"><hr></div>
+            <div class="col s2"><h5>drinks</h5></div>
+        <div class="col s5"><hr></div>
+      </div>
+      <div class="row">
+             {{#each allFood }} {{#equal dataValues.subgroup "drink"}}
+                <a class="button modal-trigger {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}-drink">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
+                <div id="{{noSpaces}}-drink" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                      <h4>{{{dataValues.emoji}}} {{{dataValues.description}}}</h4>
+                        <p class="food-type">{{{dataValues.subgroup}}} </p>
+                            <h5 class="item-price">${{{price}}}</h5>
+                        <p class="recipe">Future goal: Recipe with food</p>
+                    </div>
+                    <div class="modal-footer">
+                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
+                    </div>
+                </div>
+            {{/equal}}{{/each}} 
+      </div>
     </div>
 
+    <div class="container" id="cart" style="display: none;">
+      <div class="row">
+        <div class="col s5"><hr></div>
+            <div class="col s2"><h5>My cart</h5></div>
+        <div class="col s5"><hr></div>
+      </div>
+      <div class="row">
+            <!--{{#each allFood }} {{#equal dataValues.subgroup "drink"}}
+                <a class="button {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}-drink">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
+            {{/equal}}{{/each}}-->
+        <div>
+            <ul>
+                <li><a class="add-to-cart" href="#" data-name="Apple" data-price="1.22">Apple $1.22</a></li>
+                <li><a class="add-to-cart" href="#" data-name="Banana" data-price="1.33">Banana $1.33</a></li>
+                <li><a class="add-to-cart" href="#" data-name="Shoe" data-price="22.33">Shoe $22.33</a></li>
+                <li><a class="add-to-cart" href="#" data-name="Frisbee" data-price="5.22">Frisbee $5.22</a></li>
+            </ul>
+            <button id="clear-cart">Clear Cart</button>
+        </div>
+        <div>
+            <ul id="show-cart">
+                <li>???????</li>
+            </ul>
+            <div>You have <span id="count-cart">X</span> items in your cart</div>
+            <div>Total Cart:$<span id="total-cart"></span></div>
+        </div>
+      </div>
     </div>
+
     <script>
       $(document).ready(function(){
           $('.modal').modal();
-        })
-      </script>
+        });
+
+    var divs = ["all-food", "fruits", "vegetables", "prepared", "asian", "sea-food", "sweets", "drinks", "cart"];
+    var visibleDivId = null;
+    function divVisibility(divId) {
+      if(visibleDivId === divId) {
+        visibleDivId = null;
+      } else {
+        visibleDivId = divId;
+      }
+      hideNonVisibleDivs();
+    }
+    function hideNonVisibleDivs() {
+      var i, divId, div;
+      for(i = 0; i < divs.length; i++) {
+        divId = divs[i];
+        div = document.getElementById(divId);
+        if(visibleDivId === divId) {
+          div.style.display = "block";
+        } else {
+          div.style.display = "none";
+        }
+      }
+    };
+    </script>
