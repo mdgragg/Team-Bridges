@@ -23,7 +23,6 @@
         <div class="col s5"><hr></div>
       </div>
       <div class="row" id="product-list">
-       <a class="button grapes modal-trigger" href="#modal">&#127822 &nbsp; food item</a>
                 {{#each allFood}}
                 <a class="button modal-trigger {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
                 <div id="{{noSpaces}}" class="modal modal-fixed-footer">
@@ -231,40 +230,15 @@
         </div>-->
         <div>
             <ul id="show-cart">
-                <li>???????</li>
+                <li></li>
             </ul>
             <div>You have <span id="count-cart">X</span> items in your cart</div>
+            <br>
             <div>Total Cart:$<span id="total-cart"></span></div>
+            <br>
             <button id="clear-cart">Clear Cart</button>
         </div>
       </div>
-
-    
-    <!--<div class="row">
-    <nav class="top-bar" data-topbar>
-        <ul class="title-area">
-            <li class="name">
-                <h1><a href="#">JS Shopping Cart</a></h1>
-            </li>
-        </ul>
-    </nav>
-    <div class="medium-4  columns">
-        <div class="cart">
-            <h1>Cart items</h1>
-            <div class="row">
-                <div class="medium-6 columns">
-                    <button class="tiny secondary" id="clear">Clear the cart</button>
-                </div>
-                <div class="medium-6 columns">
-                    <button class="tiny disabled" title="Work in progress">Checkout</button>
-                </div>
-            </div>
-            <div id="cartItems">Loading cart...</div>
-            Total price: <strong id="totalPrice">0 $</strong>
-        </div>
-    </div>-->
-
-
 
     <script>
       $(document).ready(function(){

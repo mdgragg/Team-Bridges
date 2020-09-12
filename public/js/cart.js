@@ -19,9 +19,11 @@ loadCart();
 // Public methods and properties
 const shoppingCart = {};
 shoppingCart.addItemToCart = function(name, price, count) {
-  for (const i in cart) {
+  // eslint-disable-next-line prefer-const
+  for (let i in cart) {
     if (cart[i].name === name) {
       cart[i].count += count;
+      console.log(name);
       saveCart();
       alert("Item added to your cart!");
       return;
@@ -30,6 +32,7 @@ shoppingCart.addItemToCart = function(name, price, count) {
   console.log("addItemToCart:", name, price, count);
   const item = new Item(name, price, count);
   cart.push(item);
+  alert("Item added to your cart!");
   saveCart();
 };
 shoppingCart.setCountForItem = function(name, count) {
@@ -116,8 +119,10 @@ $(document).on("click", ".add-to-cart", event => {
   displayCart();
   console.log("test");
 });
-$("#clear-cart").click(() => {
-  shoppingCart.clearCart().empty(), displayCart();
+// eslint-disable-next-line no-unused-vars
+$(document).on("click", "#clear-cart", event => {
+  shoppingCart.clearCart();
+  displayCart();
 });
 function displayCart() {
   const cartArray = shoppingCart.listCart();
@@ -151,24 +156,29 @@ function displayCart() {
   $("#count-cart").html(shoppingCart.countCart());
   $("#total-cart").html(shoppingCart.totalCart());
 }
-$("#show-cart").on("click", ".delete-item", function() {
-  const name = $(this).attr("data-name");
-  shoppingCart.removeItemFromCartAll(name);
-  displayCart();
-});
-$("#show-cart").on("click", ".subtract-item", function() {
-  const name = $(this).attr("data-name");
-  shoppingCart.removeItemFromCart(name);
-  displayCart();
-});
-$("#show-cart").on("click", ".plus-item", function() {
-  const name = $(this).attr("data-name");
+$(document).on("click", ".plus-item", event => {
+  event.stopPropagation();
+  const name = $(event.target).attr("data-name");
+  console.log(name);
   shoppingCart.addItemToCart(name, 0, 1);
   displayCart();
 });
-$("#show-cart").on("change", ".item-count", function() {
-  const name = $(this).attr("data-name");
-  const count = Number($(this).val());
+$(document).on("click", ".subtract-item", event => {
+  event.stopPropagation();
+  const name = $(event.target).attr("data-name");
+  shoppingCart.removeItemFromCart(name);
+  displayCart();
+});
+$(document).on("click", "#show-cart", event => {
+  event.stopPropagation();
+  const name = $(event.target).attr("data-name");
+  shoppingCart.removeItemFromCartAll(name);
+  displayCart();
+});
+$(document).on("click", ".item-count", event => {
+  event.stopPropagation();
+  const name = $(event.target).attr("data-name");
+  const count = Number($(event.target).val());
   shoppingCart.setCountForItem(name, count);
   displayCart();
 });
