@@ -36,9 +36,7 @@ font-family: 'Oswald', sans-serif;
 .modal.modal-fixed-footer {
     padding: 0;
     height: 300px;
-    width: 100%;
-    min-width: 300px;
-    max-width: 400px;
+    width: 400px;
     margin-bottom: 20px;
 }
 .modal .modal-footer {
