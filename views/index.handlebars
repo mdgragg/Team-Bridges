@@ -1,4 +1,5 @@
     <header>
+      <div class="header"> 
         <a href="" class="logo">&#128512 groceri emoji</a>
         <a href="#" onclick="divVisibility('cart');" class="cart">&#128722 My Cart</a>
        
@@ -11,9 +12,10 @@
           <a href="#" onclick="divVisibility('sweets');">sweets</a> <span>|</span> 
           <a href="#" onclick="divVisibility('drinks');">drinks</a> 
         </div>
+      </div>
+
     </header>
     
-​
     <div class="container" id="all-food">
       <div class="row">
         <div class="col s5"><hr></div>
@@ -32,14 +34,13 @@
                         <p class="recipe">Future goal: Recipe with food</p>
                     </div>
                     <div class="modal-footer">
-                      <a href="#!" class="modal-action to-cart button add-to-cart">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action to-cart button add-to-cart" data-name="{{{dataValues.description}}}" data-price="{{{price}}}">&#128722 &nbsp; Add to Cart</a>
                       <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
                     </div>
                 </div>
             {{/each}}
       </div>
     </div>
-​
     <div class="container" id="fruits" style="display: none;">
       <div class="row">
         <div class="col s5"><hr></div>
@@ -57,14 +58,13 @@
                         <p class="recipe">Future goal: Recipe with food</p>
                     </div>
                     <div class="modal-footer">
-                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action to-cart button add-to-cart" data-name="{{{dataValues.description}}}" data-price="{{{price}}}">&#128722 &nbsp; Add to Cart</a>
                       <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
                     </div>
                 </div>
             {{/equal}}{{/each}} 
       </div>
     </div>
-​
     <div class="container" id="vegetables" style="display: none;">
       <div class="row">
         <div class="col s4"><hr></div>
@@ -82,14 +82,13 @@
                         <p class="recipe">Future goal: Recipe with food</p>
                     </div>
                     <div class="modal-footer">
-                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action to-cart button add-to-cart" data-name="{{{dataValues.description}}}" data-price="{{{price}}}">&#128722 &nbsp; Add to Cart</a>
                       <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
                     </div>
                 </div>
             {{/equal}}{{/each}} 
       </div>
     </div>
-​
     <div class="container" id="prepared" style="display: none;">
       <div class="row">
         <div class="col s4"><hr></div>
@@ -107,14 +106,13 @@
                         <p class="recipe">Future goal: Recipe with food</p>
                     </div>
                     <div class="modal-footer">
-                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action to-cart button add-to-cart" data-name="{{{dataValues.description}}}" data-price="{{{price}}}">&#128722 &nbsp; Add to Cart</a>
                       <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
                     </div>
                 </div>
             {{/equal}}{{/each}} 
       </div>
     </div>
-​
     <div class="container" id="asian" style="display: none;">
       <div class="row">
         <div class="col s5"><hr></div>
@@ -132,14 +130,13 @@
                         <p class="recipe">Future goal: Recipe with food</p>
                     </div>
                     <div class="modal-footer">
-                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action to-cart button add-to-cart" data-name="{{{dataValues.description}}}" data-price="{{{price}}}">&#128722 &nbsp; Add to Cart</a>
                       <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
                     </div>
                 </div>
             {{/equal}}{{/each}} 
       </div>
     </div>
-​
     <div class="container" id="sea-food" style="display: none;">
       <div class="row">
         <div class="col s5"><hr></div>
@@ -157,14 +154,13 @@
                         <p class="recipe">Future goal: Recipe with food</p>
                     </div>
                     <div class="modal-footer">
-                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action to-cart button add-to-cart" data-name="{{{dataValues.description}}}" data-price="{{{price}}}">&#128722 &nbsp; Add to Cart</a>
                       <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
                     </div>
                 </div>
             {{/equal}}{{/each}} 
       </div>
     </div>
-​
     <div class="container" id="sweets" style="display: none;">
       <div class="row">
         <div class="col s5"><hr></div>
@@ -182,14 +178,13 @@
                         <p class="recipe">Future goal: Recipe with food</p>
                     </div>
                     <div class="modal-footer">
-                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action to-cart button add-to-cart" data-name="{{{dataValues.description}}}" data-price="{{{price}}}">&#128722 &nbsp; Add to Cart</a>
                       <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
                     </div>
                 </div>
             {{/equal}}{{/each}} 
       </div>
     </div>
-​
     <div class="container" id="drinks" style="display: none;">
       <div class="row">
         <div class="col s5"><hr></div>
@@ -207,7 +202,7 @@
                         <p class="recipe">Future goal: Recipe with food</p>
                     </div>
                     <div class="modal-footer">
-                      <a href="#!" class="modal-action to-cart button data-name">&#128722 &nbsp; Add to Cart</a>
+                      <a href="#!" class="modal-action to-cart button add-to-cart" data-name="{{{dataValues.description}}}" data-price="{{{price}}}">&#128722 &nbsp; Add to Cart</a>
                       <a href="#!" class="modal-action modal-close button">&#128533 &nbsp; Close</a>
                     </div>
                 </div>
@@ -221,30 +216,31 @@
             <div class="col s2"><h5>My cart</h5></div>
         <div class="col s5"><hr></div>
       </div>
-      <!--<div class="row">
-            {{#each allFood }} {{#equal dataValues.subgroup "drink"}}
+      <div class="row">
+            <!--{{#each allFood }} {{#equal dataValues.subgroup "drink"}}
                 <a class="button {{noSpaces}}" data-subgroup={{dataValues.subgroup}} href="#{{noSpaces}}-drink">{{{dataValues.emoji}}} {{{dataValues.description}}}</a>
-            {{/equal}}{{/each}}
-        <div>
+            {{/equal}}{{/each}}-->
+        <!--<div>
             <ul>
                 <li><a class="add-to-cart" href="#" data-name="Apple" data-price="1.22">Apple $1.22</a></li>
                 <li><a class="add-to-cart" href="#" data-name="Banana" data-price="1.33">Banana $1.33</a></li>
                 <li><a class="add-to-cart" href="#" data-name="Shoe" data-price="22.33">Shoe $22.33</a></li>
                 <li><a class="add-to-cart" href="#" data-name="Frisbee" data-price="5.22">Frisbee $5.22</a></li>
             </ul>
-            <button id="clear-cart">Clear Cart</button>
-        </div>
+            
+        </div>-->
         <div>
             <ul id="show-cart">
                 <li>???????</li>
             </ul>
             <div>You have <span id="count-cart">X</span> items in your cart</div>
             <div>Total Cart:$<span id="total-cart"></span></div>
+            <button id="clear-cart">Clear Cart</button>
         </div>
-      </div>-->
+      </div>
 
     
-    <div class="row">
+    <!--<div class="row">
     <nav class="top-bar" data-topbar>
         <ul class="title-area">
             <li class="name">
@@ -266,7 +262,7 @@
             <div id="cartItems">Loading cart...</div>
             Total price: <strong id="totalPrice">0 $</strong>
         </div>
-    </div>
+    </div>-->
 
 
 
