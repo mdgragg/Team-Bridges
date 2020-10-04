@@ -1,6 +1,9 @@
 # Team-Bridges
 The groceri emoji application is meant to simplify online grocery shopping with the click of an emoji
 
+<img src="https://raw.githubusercontent.com/mdgragg/responsive-portfolio/master/images/portfolio/groceri-emoji.png" width="700" />
+
+
 # Criteria
 The team set out to design and build an app using the MVC paradigm and our own server-side AP
 
